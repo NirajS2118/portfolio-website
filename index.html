@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Niraj Kumar - BTech Computer Science Student at IIIT Senapati | MERN Stack Developer | DSA Enthusiast | Open to Opportunities">
+    <title>Niraj Kumar | BTech CS Portfolio</title>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="brand-bracket">&lt;</span>NK<span class="brand-bracket">/&gt;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+           <a href="resume/Niraj__Resume.pdf" download="Niraj__Resume.pdf" class="nav-cta">
+  Download CV <i class="fas fa-arrow-down"></i>
+</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#home" class="mob-link">Home</a></li>
+            <li><a href="#about" class="mob-link">About</a></li>
+            <li><a href="#skills" class="mob-link">Skills</a></li>
+            <li><a href="#projects" class="mob-link">Projects</a></li>
+            <li><a href="#experience" class="mob-link">Experience</a></li>
+            <li><a href="#contact" class="mob-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Open to Opportunities — 2027 Batch
+            </div>
+            <h1 class="hero-title">
+                <span class="hero-greeting">Hi, I'm</span>
+                <span class="hero-name">Niraj Kumar</span>
+                <span class="hero-role">
+                    <span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+                </span>
+            </h1>
+            <p class="hero-desc">
+                BTech Computer Science student at IIIT Senapati, Manipur, passionate about building 
+                scalable MERN stack applications and solving algorithmic problems. Solved 700+ problems 
+                across LeetCode, GeeksforGeeks &amp; Codeforces — Top 4% in CodeChef among 35,000+ participants.
+            </p>
+            <div class="hero-stack">
+                <span class="stack-tag">Java</span>
+                <span class="stack-tag">React</span>
+                <span class="stack-tag">Node.js</span>
+                <span class="stack-tag">MongoDB</span>
+                <span class="stack-tag">DSA</span>
+                <span class="stack-tag">Git</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="btn-ghost">Let's Connect</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/NirajS2118" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nirajkumar1207/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+               <a href="https://leetcode.com/u/Niraj_S2118/" target="_blank" aria-label="LeetCode">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/>
+                    </svg>
+                </a>
+                <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="avatar-wrapper">
+                <div class="avatar-ring ring-1"></div>
+                <div class="avatar-ring ring-2"></div>
+                <div class="avatar-ring ring-3"></div>
+                <div class="avatar-img">
+                    <img src="img/hero.png" alt="Niraj Kumar">
+                </div>
+                <div class="floating-chip chip-1"><i class="fab fa-react"></i> React</div>
+                <div class="floating-chip chip-2"><i class="fab fa-python"></i> Python</div>
+                <div class="floating-chip chip-3"><i class="fas fa-database"></i> MongoDB</div>
+                <div class="floating-chip chip-4">⭐ 7.91 CGPA</div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll Down</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card" data-count="700">
+                    <span class="stat-num" data-target="700">0</span>+
+                    <span class="stat-label">Problems Solved</span>
+                </div>
+                <div class="stat-card" data-count="2">
+                    <span class="stat-num" data-target="2">0</span>+
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat-card" data-count="35">
+                    <span class="stat-num" data-target="35">0</span>k+
+                    <span class="stat-label">CodeChef Participants<br>Outranked (Top 4%)</span>
+                </div>
+                <div class="stat-card" data-count="791">
+                    <span class="stat-num" data-target="791">0</span>
+                    <span class="stat-label">CGPA (×100)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Who I Am</h2>
+                <p class="section-subtitle">Driven by curiosity, guided by code</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image-side">
+                    <div class="about-img-wrap">
+                        <img src="img/hero.png" alt="Niraj Kumar">
+                        <div class="about-img-badge">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BTech CSE</span>
+                            <small>IIIT Senapati — 2027</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text-side">
+                    <h3>Building the Future, One Commit at a Time</h3>
+                    <p>
+                        I'm a BTech Computer Science student at IIIT Senapati, Manipur (2023–2027), 
+                        maintaining a CGPA of 7.91. I specialise in MERN stack development and love 
+                        building full-stack applications that solve real problems.
+                    </p>
+                    <p>
+                        When I'm not coding, I'm grinding DSA problems — 700+ solved across LeetCode, 
+                        GeeksforGeeks and Codeforces. I lead the Silent Reading Club and the Volleyball 
+                        Group at IIIT Manipur, and regularly organise coding contests on campus.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>IIIT Senapati, Manipur, India</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>IIIT Senapati — CSE, 2027</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>nkytata11@gmail.com</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 7091123347</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-language"></i>
+                            <span>Hindi, English</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-award"></i>
+                            <span>Top 4% — CodeChef (35,000+ participants)</span>
+                        </div>
+                    </div>
+                    <div class="about-cta">
+                        <<a href="resume/Niraj__Resume.pdf" download="Niraj__Resume.pdf" class="btn-primary">
+  Download Resume <i class="fas fa-file-pdf"></i>
+</a>
+                        <a href="#contact" class="btn-ghost">Hire Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Arsenal</span>
+                <h2 class="section-title">Skills & Tech Stack</h2>
+                <p class="section-subtitle">Technologies I work with every day</p>
+            </div>
+            <div class="skills-tabs">
+                <button class="skill-tab active" data-tab="languages">Languages</button>
+                <button class="skill-tab" data-tab="frontend">Frontend</button>
+                <button class="skill-tab" data-tab="backend">Backend</button>
+                <button class="skill-tab" data-tab="tools">Tools & Cloud</button>
+            </div>
+            <div class="skills-content">
+                <div class="skills-panel active" data-panel="languages">
+                    <div class="skill-cards">
+                        <div class="skill-card"><div class="skill-icon" style="color:#b07219"><i class="fab fa-java"></i></div><span>Java (Primary)</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#f7df1e"><i class="fab fa-js-square"></i></div><span>JavaScript</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#3776ab"><i class="fab fa-python"></i></div><span>Python</span><div class="skill-bar"><div class="skill-fill" data-width="70"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#00599c"><i class="fas fa-code"></i></div><span>C</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+                    </div>
+                </div>
+                <div class="skills-panel" data-panel="frontend">
+                    <div class="skill-cards">
+                        <div class="skill-card"><div class="skill-icon" style="color:#61dafb"><i class="fab fa-react"></i></div><span>React.js</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#e34f26"><i class="fab fa-html5"></i></div><span>HTML5</span><div class="skill-bar"><div class="skill-fill" data-width="95"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#1572b6"><i class="fab fa-css3-alt"></i></div><span>CSS3 / SCSS</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#06b6d4"><i class="fas fa-wind"></i></div><span>Tailwind CSS</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#0070f3"><i class="fas fa-n"></i></div><span>Next.js</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#ff4154"><i class="fas fa-chart-line"></i></div><span>Redux</span><div class="skill-bar"><div class="skill-fill" data-width="72"></div></div></div>
+                    </div>
+                </div>
+                <div class="skills-panel" data-panel="backend">
+                    <div class="skill-cards">
+                        <div class="skill-card"><div class="skill-icon" style="color:#339933"><i class="fab fa-node-js"></i></div><span>Node.js</span><div class="skill-bar"><div class="skill-fill" data-width="85"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#000000"><i class="fas fa-server"></i></div><span>Express.js</span><div class="skill-bar"><div class="skill-fill" data-width="83"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#47a248"><i class="fas fa-leaf"></i></div><span>MongoDB</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#336791"><i class="fas fa-database"></i></div><span>PostgreSQL</span><div class="skill-bar"><div class="skill-fill" data-width="75"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#dc382d"><i class="fas fa-memory"></i></div><span>Redis</span><div class="skill-bar"><div class="skill-fill" data-width="65"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#0769ad"><i class="fas fa-bolt"></i></div><span>REST APIs</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+                    </div>
+                </div>
+                <div class="skills-panel" data-panel="tools">
+                    <div class="skill-cards">
+                        <div class="skill-card"><div class="skill-icon" style="color:#f05032"><i class="fab fa-git-alt"></i></div><span>Git / GitHub</span><div class="skill-bar"><div class="skill-fill" data-width="88"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#47a248"><i class="fas fa-leaf"></i></div><span>MongoDB</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#06b6d4"><i class="fas fa-wind"></i></div><span>Tailwind CSS</span><div class="skill-bar"><div class="skill-fill" data-width="78"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#0769ad"><i class="fas fa-bolt"></i></div><span>REST APIs / JWT</span><div class="skill-bar"><div class="skill-fill" data-width="82"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#336791"><i class="fas fa-database"></i></div><span>DBMS / OOP</span><div class="skill-bar"><div class="skill-fill" data-width="80"></div></div></div>
+                        <div class="skill-card"><div class="skill-icon" style="color:#e34f26"><i class="fab fa-html5"></i></div><span>HTML / CSS</span><div class="skill-bar"><div class="skill-fill" data-width="90"></div></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="certs-section">
+                <h3 class="certs-title">Achievements & Leadership</h3>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="cert-info">
+                            <h4>Top 4% — CodeChef Contest</h4>
+                            <span>35,000+ Participants</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-code"></i></div>
+                        <div class="cert-info">
+                            <h4>700+ Problems Solved</h4>
+                            <span>LeetCode, GeeksforGeeks, Codeforces</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-book-reader"></i></div>
+                        <div class="cert-info">
+                            <h4>Lead — Silent Reading Club</h4>
+                            <span>IIIT Manipur</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div class="cert-info">
+                            <h4>Coding Event Organiser</h4>
+                            <span>Programming Contests — IIIT Manipur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Things I've built that I'm proud of</p>
+            </div>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="ml">AI / ML</button>
+                <button class="filter-btn" data-filter="open-source">Open Source</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured" data-category="fullstack">
+                    <div class="project-img">
+                        <img src="img/port1.jpg" alt="DSA Problem Tracking Platform">
+                        <div class="project-overlay">
+                            <a href="https://github.com/NirajS2118/dsa-problem-tracker" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Full Stack</span>
+                            <span class="project-featured">⭐ Featured</span>
+                        </div>
+                        <h3>DSA Problem Tracking &amp; Revision Platform</h3>
+                        <p>A MERN-stack DSA preparation platform with JWT authentication, protected routes, 
+                        searchable problem tracking, revision management, editable notes, and automatic streak tracking.</p>
+                        <div class="project-tech">
+                            <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Tailwind CSS</span><span>JWT</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-calendar"></i> March 2026</span>
+                            <span><i class="fas fa-fire"></i> Streak Tracking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-img">
+                        <img src="img/port2.jpg" alt="Snake Game">
+                        <div class="project-overlay">
+                            <a href="https://github.com/NirajS2118/Snake-Game" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://nirajs2118.github.io/Snake-Game/" class="overlay-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Frontend</span>
+                        </div>
+                        <h3>Snake Game — Browser-Based</h3>
+                        <p>A browser-based Snake Game with real-time movement, dynamic difficulty scaling, 
+                        collision detection, score tracking, and optimized DOM rendering for smooth gameplay.</p>
+                        <div class="project-tech">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fas fa-calendar"></i> May 2025</span>
+                            <span><i class="fab fa-github"></i> GitHub Pages</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-img">
+                        <img src="img/port3.jpg" alt="More Projects">
+                        <div class="project-overlay">
+                            <a href="https://github.com/NirajS2118" class="overlay-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-meta">
+                            <span class="project-tag">Coming Soon</span>
+                        </div>
+                        <h3>More Projects on GitHub</h3>
+                        <p>Check out my GitHub profile for more projects, experiments, and contributions 
+                        across different domains of web development and DSA.</p>
+                        <div class="project-tech">
+                            <span>MERN</span><span>Java</span><span>Python</span>
+                        </div>
+                        <div class="project-stats">
+                            <span><i class="fab fa-github"></i> NirajS2118</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-more">
+                <a href="#" class="btn-ghost">See All Projects on GitHub <i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">Experience & Education</h2>
+                <p class="section-subtitle">Where I've worked and studied</p>
+            </div>
+            <div class="timeline-wrapper">
+                <div class="timeline-col">
+                    <h3 class="timeline-col-title"><i class="fas fa-laptop-code"></i> Projects</h3>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-content">
+                                <div class="tl-header">
+                                    <h4>DSA Problem Tracking &amp; Revision Platform</h4>
+                                    <span class="tl-company">MERN Stack</span>
+                                </div>
+                                <span class="tl-date"><i class="fas fa-calendar"></i> March 2026</span>
+                                <ul class="tl-points">
+                                    <li>Built a MERN-stack DSA prep platform with JWT authentication and protected routes</li>
+                                    <li>Implemented searchable problem tracking, revision management, editable notes, and automatic streak tracking</li>
+                                    <li>Developed responsive dashboard UI using React, Node.js, Express, MongoDB, and Tailwind CSS</li>
+                                </ul>
+                                <div class="tl-tags"><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>JWT</span></div>
+                            </div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot"></div>
+                            <div class="tl-content">
+                                <div class="tl-header">
+                                    <h4>Snake Game</h4>
+                                    <span class="tl-company">HTML, CSS, JavaScript</span>
+                                </div>
+                                <span class="tl-date"><i class="fas fa-calendar"></i> May 2025</span>
+                                <ul class="tl-points">
+                                    <li>Built a browser-based Snake Game with real-time movement and dynamic difficulty scaling</li>
+                                    <li>Implemented collision detection, score tracking, and optimized DOM rendering for smooth gameplay</li>
+                                    <li>Deployed via GitHub Pages</li>
+                                </ul>
+                                <div class="tl-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub Pages</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-col">
+                    <h3 class="timeline-col-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline">
+                        <div class="tl-item">
+                            <div class="tl-dot tl-dot-edu"></div>
+                            <div class="tl-content">
+                                <div class="tl-header">
+                                    <h4>B.Tech — Computer Science &amp; Engineering</h4>
+                                    <span class="tl-company">IIIT Senapati, Manipur</span>
+                                </div>
+                                <span class="tl-date"><i class="fas fa-calendar"></i> 2023 – 2027</span>
+                                <ul class="tl-points">
+                                    <li>CGPA: 7.91 — Active in competitive programming and campus clubs</li>
+                                    <li>Lead member of Silent Reading Club; Led the Volleyball Group</li>
+                                    <li>Organised coding events and programming contests on campus</li>
+                                </ul>
+                                <div class="tl-tags"><span>CGPA 7.91</span><span>DSA</span><span>MERN</span></div>
+                            </div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot tl-dot-edu"></div>
+                            <div class="tl-content">
+                                <div class="tl-header">
+                                    <h4>Class 12 — CBSE</h4>
+                                    <span class="tl-company">SDSM School, Jamshedpur</span>
+                                </div>
+                                <span class="tl-date"><i class="fas fa-calendar"></i> 2020 – 2022</span>
+                                <ul class="tl-points">
+                                    <li>Percentage: 81%</li>
+                                </ul>
+                                <div class="tl-tags"><span>81%</span><span>CBSE</span></div>
+                            </div>
+                        </div>
+                        <div class="tl-item">
+                            <div class="tl-dot tl-dot-edu"></div>
+                            <div class="tl-content">
+                                <div class="tl-header">
+                                    <h4>Class 10 — ICSE</h4>
+                                    <span class="tl-company">DSM School, Jamshedpur</span>
+                                </div>
+                                <span class="tl-date"><i class="fas fa-calendar"></i> 2019 – 2020</span>
+                                <ul class="tl-points">
+                                    <li>CGPA: 9.1</li>
+                                </ul>
+                                <div class="tl-tags"><span>CGPA 9.1</span><span>ICSE</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">I'm currently looking for new opportunities. My inbox is always open!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info-side">
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email Me</h4>
+                        <a href="mailto:nkytata11@gmail.com">nkytata11@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-linkedin"></i></div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/nirajkumar1207/" target="_blank">linkedin.com/in/nirajkumar1207</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fab fa-github"></i></div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/NirajS2118" target="_blank">github.com/NirajS2118</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h4>Location</h4>
+                        <span>Jamshedpur, Jharkhand 🇮🇳</span>
+                    </div>
+                    <div class="availability-badge">
+                        <span class="avail-dot"></span>
+                        Open to internship &amp; full-time opportunities
+                    </div>
+                </div>
+                <div class="contact-form-side">
+                    <!--
+                        =====================================================
+                        EMAIL SETUP INSTRUCTIONS (EmailJS — free, no backend)
+                        =====================================================
+                        1. Go to https://www.emailjs.com → create a free account.
+                        2. Add an Email Service (Gmail) → note your SERVICE_ID.
+                        3. Create an Email Template using variables:
+                               {{from_name}}, {{from_email}}, {{company}}, {{subject}}, {{message}}
+                           Note your TEMPLATE_ID.
+                        4. Account → General → copy your PUBLIC KEY.
+                        5. In index.js replace the 3 placeholder strings at the top.
+                        =====================================================
+                    -->
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" name="from_name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Email</label>
+                                <input type="email" name="from_email" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Company / Organization</label>
+                            <input type="text" name="company" placeholder="Google, Startup, University...">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" name="subject" placeholder="Job Opportunity / Collaboration / Just Saying Hi" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="5" placeholder="Tell me about the role or project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary full-width" id="contactSubmitBtn">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div id="contactFeedback" style="display:none;margin-top:12px;padding:12px;border-radius:8px;text-align:center;font-weight:500;font-size:0.9rem;"></div>
+                        <p style="font-size:0.75rem;color:var(--color-text-muted,#888);text-align:center;margin-top:8px;">
+                            Powered by <a href="https://www.emailjs.com" target="_blank" style="color:var(--color-primary,#6366f1);">EmailJS</a> — see setup instructions in <code>incdex.js</code>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="brand-bracket">&lt;</span>NK<span class="brand-bracket">/&gt;</span>
+                    <p>Building the future, one commit at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/NirajS2118" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nirajkumar1207/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://leetcode.com/u/Niraj_S2118/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+                    <a href="https://www.codechef.com/users/presence_07" target="_blank" aria-label="CodeChef"><i class="fas fa-trophy"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Niraj Kumar. Designed &amp; Built with ❤️ and lots of ☕</p>
+                <a href="#home" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
